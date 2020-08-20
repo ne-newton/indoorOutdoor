@@ -13,5 +13,5 @@ It outputs model.h5
 testSingleImage.py will test a single image against the model.
 In the commandline, use the -i flag to enter the name of you image
 
-  python testSingleImage.py -f imagename.jpg
+`python testSingleImage.py -f imagename.jpg`
   
