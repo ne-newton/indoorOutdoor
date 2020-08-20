@@ -2,7 +2,7 @@
 Determines if an image was taken in an indoor or outdoor environment
 
 ## Dependences:
-numpy, tensorflow, pandas matplotlib
+numpy, tensorflow, pandas, matplotlib
 
 ## About
 Trained on frames taken from youtube-8m videos using tensorflow.
