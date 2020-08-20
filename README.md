@@ -13,6 +13,6 @@ It outputs model.h5, a graph of the prediction loss over the epochs for both the
 testSingleImage.py will test a single image against the model.
 In the commandline, use the -i flag to enter the name of you image
 
-`python testSingleImage.py -f imagename.jpg`
+`python testSingleImage.py -i imagename.jpg`
 
 this will output the percentage the model believes that the image was taken in an indoor or outdoor environment.
