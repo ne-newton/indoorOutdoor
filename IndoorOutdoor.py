@@ -56,7 +56,7 @@ model.add(MaxPooling2D())
 model.add(Flatten())
 model.add(Dense(64, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
-model.compile(loss='binary_crossentropy', optimizer='adam')
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 #Early stop to avoid overfitting
 early_stop = EarlyStopping(
@@ -81,11 +81,12 @@ model.save('model.h5', overwrite=True)
 #Output plot of loss for training and validation
 model_loss = pd.DataFrame(model.history.history)
 model_loss.plot()
-plt.title('Loss - Binary Cross Entropy')
-plt.xlabel('epochs')
+plt.title('Loss and Accuracy')
+plt.xlabel('Epochs')
 plt.show()
 
 #Evaluate model
 print('\nTesting validation model...')
-test_score = model.evaluate(val_ds, verbose=0)
+test_score, test_accuracy = model.evaluate(val_ds, verbose=0)
 print('validation dataset prediction loss (binary cross entroy):', test_score)
+print('Total true predictions / total predictions for validation dataset:', test_accuracy)
